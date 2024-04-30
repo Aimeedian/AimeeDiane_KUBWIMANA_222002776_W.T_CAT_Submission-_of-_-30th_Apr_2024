@@ -1,4 +1,4 @@
-credential used in database connect as
+credential used in database connection as
 
 username:aimee
 
