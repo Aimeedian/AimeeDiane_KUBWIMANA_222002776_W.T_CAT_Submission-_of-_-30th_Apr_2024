@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance System - Home</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./tth.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            margin: 20px;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: teal;
+            border-bottom: 5px solid black;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+        .header h3 {
+            color: white;
+        }
+        .navigation {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: white;
+            background-color: none;
+            padding: 8px 15px;
+            border-radius: 3px;
+        }
+        .navigation li a:hover {
+            background-color: deeppink;
+        }
+
+        /* Main content styling */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Adding opacity to background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            color: darkolivegreen;
+        }
+        .container p {
+            color: #333;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: teal;
+            text-align: center;
+            width: 100%;
+            height: 70px;
+            color: white;
+            font-size: 25px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Dropdown styles */
+        .dropdown-contents {
+            display: none;
+            position: absolute;
+            background-color: deeppink;
+            text-decoration: none;
+            min-width: 120px;
+            z-index: 1;
+        }
+        .dropdown-contents a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        .dropdown-contents a:hover {
+            background-color: red;
+        }
+        .dropdown:hover .dropdown-contents {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img class="logo" src="tt.png" alt="Logo">
+    <h3>ONLINE EMPLOYEE <br>ATTENDANCE SYSTEM</h3>
+    <ul class="navigation">
+        <li><a href="home page.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li class="dropdown">
+            <a href="#">Forms</a>
+                 <div class="dropdown-contents">
+                <a href="employee.php">Employee</a>
+                <a href="attendance.php">Attendance</a>
+                <a href="holiday.php">Holiday</a>
+                <a href="Notification.php">Notification</a>
+                <a href="permission.php">Permission</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Tables</a>
+            <div class="dropdown-contents">
+                <a href="employeetable.php">Employee</a>
+                <a href="attendtable.php">Attendance</a>
+                <a href="holtable.php">Holiday</a>
+                <a href="Notiftable.php">Notification</a>
+                <a href="permtable.php">Permission</a>
+            </div>
+        </li>
+        </li>
+        <li class="dropdown">
+            <a href="#">Settings</a>
+            <div class="dropdown-contents">
+                <a href="adminlogin.php">Admin</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<center>
+    <marquee><p style="font-weight: bold;font-size: 25px;align-items: center;color: blue;"><i>EMPLOYEE ATTENDANCE MANAGEMENT SYSTEM</i></p></marquee>
+</center>
+<div style="margin-left: 500px;"><form action="search.php" method="GET">
+      <input type="search" name="query" placeholder="search here!!!!!!!" style="width: 300px;padding: 10px;border-radius: 15px;">&nbsp;&nbsp;&nbsp;<button type="submit" style="background-color: red;width: 100px;padding: 10px;">search</button>
+    </form></div>
+<div class="container">
+    <h2>Empowering Connections, Building Friendships</h2>
+    <p>Welcome to the Online Employee Attendance System, where we prioritize relationships above all else. Our mission is to foster connections, both personal and professional, to create a network of enduring friendships.</p>
+    <p>Explore our website to learn more about who we are, the services we offer, and how you can join our community.</p>
+</div>
+
+<footer>
+    <p>Designed by Aimee Diane KUBWIMANA_222002776 &copy; YEAR TWO BIT GROUP A &reg; 2024</p>
+</footer>
+
+</body>
+</html>

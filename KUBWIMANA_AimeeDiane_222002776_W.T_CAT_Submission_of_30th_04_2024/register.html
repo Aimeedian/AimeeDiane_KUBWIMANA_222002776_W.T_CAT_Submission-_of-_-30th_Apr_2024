@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid red;
+            background-color: skyblue;
+            border-radius: 10px; /* Added border radius */
+        }
+
+        .heading {
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            color: blue;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 20px;
+            color: black; /* Corrected color */
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="email"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+         input[type="radio"] {
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="tel"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 48%;
+            padding: 10px;
+            font-size: 20px;
+            background-color:#dc3545 ;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="button"] {
+            width: 48%;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:last-child {
+            background-color: blue;
+            margin-left: 4%; /* Adjusted margin */
+        }
+
+        footer {
+            background-color:teal;
+            text-align: center;
+            width: 100%;
+            height: 70px;
+            color: white;
+            font-size: 25px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+    <script>
+    function validateForm() {
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+
+        // Email validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address');
+            return false;
+        }
+
+        // Phone number validation
+        var phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(phone)) {
+            alert('Please enter a valid 10-digit phone number');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</head>
+<body style="background-image: url('./img.jpeg');
+background-repeat: no-repeat;background-size: cover;">
+<h2 class="heading"><i>EMPLOYEE ATTENDANCE MANAGEMENT SYSTEM</i></h2>
+<div class="container">
+    <h2 class="heading"><i>Create Account Form</i></h2>
+    <form action="register.php" method="POST" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="fname">Firstname</label>
+            <input type="text" name="fname" id="fname" required>
+        </div>
+        <div class="form-group">
+            <label for="lname">Lastname</label>
+            <input type="text" name="lname" id="lname" required>
+        </div>
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" name="username" id="uname" required>
+        </div>
+         <div class="form-group">
+              <label>Gender:</label>
+        <input type="radio" name="gend" value="male" checked>Male
+        <input type="radio" name="gend" value="female">Female<br><br>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required> <!-- Changed type to email -->
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input type="password" name="password" id="pword" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telephone</label>
+            <input type="tel" name="telephone" id="phone" required> <!-- Changed type to tel -->
+        </div>
+        <div class="form-group">
+        <label for="phone">Activivated_code</label>
+          <input type="text" name="activation_code" required><br><br>
+        </div>
+        <input type="submit" name="send" value="Register">
+        <input type="button" value="Cancel" onclick="window.location.href='loginform.html'">
+    </form>
+</div>
+
+<footer>
+    <p>Designed by Aimee Diane KUBWIMANA_222002776 &copy; YEAR TWO BIT GROUP A &reg; 2024</p>
+</footer>
+
+
+
+</body>
+</html>

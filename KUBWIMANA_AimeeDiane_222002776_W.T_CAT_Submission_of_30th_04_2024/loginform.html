@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login Form</title>
+    <style>
+        /* Basic styling for the navigation bar */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 25px;
+            font-weight: initial;
+            font-family: Arial, sans-serif;
+        }
+        input[type="email"], input[type="date"],input[type="password"],  select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            margin: 40px;
+            width: 200px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+          input[type="reset"] {
+            margin: 40px;
+            width: 200px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        a{
+            background-color: indigo;
+            color: white;
+            font-size: 20px;
+            font-family: initial;
+            text-decoration: none;
+        }
+         footer {
+            background-color: teal;
+            text-align: center;
+            width: 100%;
+            height: 70px;
+            color: white;
+            font-size: 25px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+       <script>
+            function confirmInsert() {
+                return confirm('Are you sure you want to insert this record?');
+            }
+        </script>
+</head>
+<body style="background-image: url('./ee.jpeg');
+background-repeat: no-repeat;background-size: cover;">
+<center>
+<p style="font-weight: bold;font-size: 25px;align-items: center;color: blue;"><i>EMPLOYEE ATTENDANCE MANAGEMENT SYSTEM</i></p>
+    <div class="container">
+        <h2 style="color: blue;">User Login Form</h2>
+        <form action="login.php" method="POST" onsubmit="return validateForm()">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+            <input type="reset" value="Cancel" onclick="window.location.href='register.html'">
+        </form>
+        <p>If you don't have an account, please <a href="register.html">Create Account</a> here!</p>
+    </div>
+
+</center>
+
+<script>
+    function validateForm() {
+        var email = document.getElementById('email').value;
+
+        // Email validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+<footer>
+    <p>Designed by Aimee Diane KUBWIMANA_222002776 &copy; YEAR TWO BIT GROUP A &reg; 2024</p>
+</footer>
+</body>
+</html>
